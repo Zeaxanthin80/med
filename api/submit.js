@@ -1,5 +1,8 @@
 module.exports = async (req, res) => {
     if (req.method === 'POST') {
+        // Log the received form data to Vercel logs
+        console.log('Form submission received:', req.body);
+        
         // Parse form data
         const { name, email, message } = req.body;
 
