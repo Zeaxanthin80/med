@@ -26,45 +26,31 @@
 //     }
 // };
 
+
 const axios = require('axios');
-const fs = require('fs');
-const path = require('path');
 
 module.exports = async (req, res) => {
+    // Ensure that the request method is POST
     if (req.method === 'POST') {
         // Log the received form data to Vercel logs
         console.log('Form submission received:', req.body);
 
+        // Destructure form data from the request body
         const { name, email, message } = req.body;
-        
-        // Create the CSV row
+
+        // Create the CSV row to be added to the file
         const csvRow = `${name},${email},${message}\n`;
 
-        // GitHub Repository Info
-        const repoOwner = 'Zeaxanthin80';
-        const repoName = 'med';
-        const filePath = 'submissions.csv';
-        const githubToken = process.env.GITHUB_TOKEN;  // Set your GitHub token securely in Vercel's environment variables
+        // GitHub Repository Info (Make sure to replace with your actual repo details)
+        const repoOwner = 'Zeaxanthin80';  // Replace with your GitHub username or organization
+        const repoName = 'med'; // Replace with your repository name
+        const filePath = 'submissions.csv'; // The path to your CSV file in the repo
+        const githubToken = process.env.GITHUB_TOKEN;  // Your GitHub token stored securely in Vercel environment variables
 
-        const updateGitHubFile = async () => {
-            try {
-                const response = await axios.get('https://api.github.com/repos/Zeaxanthin80/med/contents/submissions.csv', {
-                    headers: {
-                        'Authorization': `Bearer ${githubToken}`
-                    }
-                });
-        
-                // Logic to update the file...
-        
-            } catch (error) {
-                console.error('Error accessing GitHub:', error);
-            }
-        };
-        
         try {
-            // Get the current file content from GitHub
-            const fileContent = await axios.get(
-                `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, 
+            // Step 1: Fetch the current file content from GitHub (we need the file's SHA to update it)
+            const fileContentResponse = await axios.get(
+                `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`,
                 {
                     headers: {
                         'Authorization': `Bearer ${githubToken}`
@@ -72,22 +58,22 @@ module.exports = async (req, res) => {
                 }
             );
 
-            // Decode the file content (GitHub API returns the file content in base64)
-            const decodedContent = Buffer.from(fileContent.data.content, 'base64').toString('utf8');
+            // Step 2: Decode the file content from base64 (GitHub API returns base64-encoded content)
+            const decodedContent = Buffer.from(fileContentResponse.data.content, 'base64').toString('utf8');
 
-            // Append the new submission to the existing content
+            // Step 3: Append the new CSV row to the existing content
             const updatedContent = decodedContent + csvRow;
 
-            // Encode the updated content back to base64
+            // Step 4: Re-encode the updated content back to base64
             const encodedContent = Buffer.from(updatedContent, 'utf8').toString('base64');
 
-            // Create the commit on GitHub
+            // Step 5: Update the file on GitHub (commit the new content)
             await axios.put(
                 `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`,
                 {
-                    message: 'Add new form submission',
-                    content: encodedContent,
-                    sha: fileContent.data.sha  // GitHub requires the sha of the current file to update it
+                    message: 'Add new form submission',  // Commit message
+                    content: encodedContent,            // The updated content (base64-encoded)
+                    sha: fileContentResponse.data.sha   // SHA of the current file to update it
                 },
                 {
                     headers: {
@@ -96,13 +82,15 @@ module.exports = async (req, res) => {
                 }
             );
 
+            // Step 6: Respond with a success message
             res.status(200).json({ message: 'Submission successfully added to GitHub!' });
         } catch (error) {
-            console.error(error);
+            // Handle errors and respond with a failure message
+            console.error('Error updating GitHub file:', error);
             res.status(500).json({ error: 'Error updating CSV file on GitHub' });
         }
     } else {
+        // Respond with 405 Method Not Allowed if the request method is not POST
         res.status(405).json({ error: 'Method not allowed' });
     }
 };
-
