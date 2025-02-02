@@ -69,7 +69,7 @@ module.exports = async (req, res) => {
 
             // Step 5: Update the file on GitHub (commit the new content)
             await axios.put(
-                `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`,
+                `https://api.github.com/repos/Zeaxanthin80/med/contents/submissions.csv`,
                 {
                     message: 'Add new form submission',  // Commit message
                     content: encodedContent,            // The updated content (base64-encoded)
