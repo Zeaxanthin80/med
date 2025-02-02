@@ -1,0 +1,337 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 10;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+/* Header */
+header {
+    background-color: #7fa6ad; /* Color based on medical theme */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Ensure header is positioned above the hero */
+    z-index: 2; /* Give the header a higher stacking order */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
+}
+
+/* Logo Styling */
+.logo img {
+    width: auto;  /* Maintain original aspect ratio */
+    height: 30px;  /* Adjust height to fit well in the header */
+    max-width: 100%; /* Make sure the logo doesn't overflow its container */
+    display: block;
+    margin: 0;
+}
+
+/* Optional: Adjust header padding or background to fit the logo */
+
+
+header .logo h1 {
+    color: white;
+    font-size: 24px;
+}
+
+.logo h1 {
+    font-family: 'Arial', sans-serif; /* Use a clean and professional font */
+    font-weight: bold;
+    font-size: 32px;
+    font-style: italic;
+    color: #ffffff; /* Use a professional color like green for a medical/health-related theme */
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px; /* Adds some space between the letters */
+    text-transform: uppercase; /* Makes the logo letters all caps for a strong, bold look */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+}
+
+nav .nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    z-index: 2; /* Give the header a higher stacking order */
+    
+}
+
+nav .nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+nav .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+
+}
+
+nav .hamburger .bar {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+}
+
+/* Hero Section */
+/* .hero {
+    background-image: url('../images/pexels-tara-winstead-7722640.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
+
+.hero {
+    background-image: url('../images/pexels-tara-winstead-7722640.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;  
+    padding-top: 100px;  
+}
+
+h2 {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Add subtle shadow */;
+
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    
+}
+
+.hero-content {
+    padding: 20px; /* Adds space around the content inside the hero section */
+    text-align: center;
+}
+
+.hero-content p {
+    padding: 20px;
+    color: #ffffff;
+}
+
+
+.cta-button {
+    background-color: #7fa6ad;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 16px rgb(58, 58, 58);
+}
+
+.cta-btn:hover {
+    background-color: #3c7a1f;
+}
+
+/* Cards Section */
+.cards-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card h3 {
+    color: #7fa6ad;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Form Container */
+.form-container {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 36px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #7fa6ad;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #648186;
+}
+
+Add styling for the new fields
+.name-field {
+    display: flex;
+    gap: 15px;
+}
+
+.name-field label {
+    width: 100%;
+    font-size: 16px;
+}
+
+.name-field input {
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Other form styles */
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #7fa6ad;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav .nav-list {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #7fa6ad;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
+    }
+
+    nav .nav-list li {
+        margin: 10px 0;
+    }
+
+    nav .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}

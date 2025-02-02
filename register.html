@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Clinical Trial</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/PHARMAVUE.svg" alt="PHARMAVUE Logo" class="logo-img">
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+    
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="form-container">
+        <h2>Registration Form</h2>
+        <form action="https://med-mauve.vercel.app/api/submit" method="POST">
+            <!-- <h3>Demographics</h3> -->
+            
+            <!-- First Name and Last Name -->
+            <div class="name-field">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="first-name" required>
+
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="last-name" required>
+            </div>
+
+            <!-- Address -->
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <!-- City -->
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <!-- State -->
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+
+            <!-- Zip Code -->
+            <label for="zipcode">Zip Code:</label>
+            <input type="text" id="zipcode" name="zip-code" required>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+            
+            <!-- E-Mail -->
+            <label for="email">E-Mail:</label>
+            <input type="text" id="email" name="email" required>               
+
+            <h3>Medical History Questionnaire</h3>
+            <label for="medicalhistory">Please describe your medical history:</label>
+            <textarea id="medicalhistory" name="medical-history" rows="4" required></textarea>
+
+            <label for="allergies">Do you have any known allergies?</label>
+            <input type="text" id="allergies" name="allergies" required>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </section>
+
+
+
+    <!-- <h1>Submit Your Data</h1>
+    <form action="https://med-mauve.vercel.app/api/submit" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form> -->
+
+
+
+
+
+    <footer>
+        <p>&copy; 2025 Pharmavue Clinical, Inc. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

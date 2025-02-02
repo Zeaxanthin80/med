@@ -7,10 +7,10 @@ module.exports = async (req, res) => {
         console.log('Form submission received:', req.body);
 
         // Destructure form data from the request body
-        const { name, email, message } = req.body;
+        const {firstname, lastname, address, city, state, zipcode, phone, email, medicalhistory, allergies} = req.body;
 
         // Create the CSV row to be added to the file
-        const csvRow = `${name},${email},${message}\n`;
+        const csvRow = `${firstname},${lastname},${address},${city},${state},${zipcode},${phone},${email},${medicalhistory},${allergies}\n`;
 
         // GitHub Repository Info (Make sure to replace with your actual repo details)
         const repoOwner = 'Zeaxanthin80';  // Replace with your GitHub username or organization
@@ -54,11 +54,11 @@ module.exports = async (req, res) => {
             );
 
             // Step 6: Respond with a success message
-            res.status(200).json({ message: 'Submission successfully added to GitHub!' });
+            res.status(200).json({ message: 'Submission successfully sent!' });
         } catch (error) {
             // Handle errors and respond with a failure message
             console.error('Error updating GitHub file:', error);
-            res.status(500).json({ error: 'Error updating CSV file on GitHub' });
+            res.status(500).json({ error: 'Error updating CSV file.' });
         }
     } else {
         // Respond with 405 Method Not Allowed if the request method is not POST
