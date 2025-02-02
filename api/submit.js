@@ -46,6 +46,21 @@ module.exports = async (req, res) => {
         const filePath = 'submissions.csv';
         const githubToken = process.env.GITHUB_TOKEN;  // Set your GitHub token securely in Vercel's environment variables
 
+        const updateGitHubFile = async () => {
+            try {
+                const response = await axios.get('https://api.github.com/repos/Zeaxanthin80/med/contents/submissions.csv', {
+                    headers: {
+                        'Authorization': `Bearer ${githubToken}`
+                    }
+                });
+        
+                // Logic to update the file...
+        
+            } catch (error) {
+                console.error('Error accessing GitHub:', error);
+            }
+        };
+        
         try {
             // Get the current file content from GitHub
             const fileContent = await axios.get(
