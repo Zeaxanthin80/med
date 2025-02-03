@@ -54,7 +54,7 @@ module.exports = async (req, res) => {
             );
 
             // Step 6: Respond with a success message
-            res.status(200).redirect('success.html');
+            (res.redirect(303, '/success.html'));
         } catch (error) {
             // Handle errors and respond with a failure message
             console.error('Error updating GitHub file:', error);
@@ -65,3 +65,6 @@ module.exports = async (req, res) => {
         res.status(405).json({ error: 'Method not allowed' });
     }
 };
+
+
+// Handle errors and respond with a failure message
