@@ -26,7 +26,7 @@ header {
 /* Logo Styling */
 .logo img {
     width: auto;  /* Maintain original aspect ratio */
-    height: 30px;  /* Adjust height to fit well in the header */
+    height: 21px;  /* Adjust height to fit well in the header */
     max-width: 100%; /* Make sure the logo doesn't overflow its container */
     display: block;
     margin: 0;
@@ -107,7 +107,7 @@ nav .hamburger .bar {
     text-align: center;
     position: relative;
     z-index: 1;
-    padding: 0 20px;  
+    padding: 0 16px;  
     padding-top: 100px;  
 }
 
@@ -314,12 +314,9 @@ footer {
         display: flex;
     }
 
-    .hero {
-        height: 50vh;
-    }
 
     .form-container {
-        padding: 20px;
+        padding: 10px;
     }
 }
 
@@ -331,7 +328,50 @@ footer {
     }
 
     .card {
-        width: 90%;
-        margin-bottom: 20px;
+        width: 92%;
+        margin-bottom: 10px;
     }
+    .hero {
+        background-image: url('../images/pexels-tara-winstead-7722640.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        padding: 0 10px;  
+        padding-top: 80px;  
+    }
+    
+    h2 {
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Add subtle shadow */;
+    
+    }
+    
+    .hero h2 {
+        font-size: 48px;
+        margin-bottom: 10px;
+        
+    }
+    
+    .hero p {
+        font-size: 22px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .hero-content {
+        padding: 16px; /* Adds space around the content inside the hero section */
+        text-align: center;
+    }
+    
+    .hero-content p {
+        padding: 20px;
+        color: #ffffff;
+    }
+    
 }

@@ -54,7 +54,48 @@ module.exports = async (req, res) => {
             );
 
             // Step 6: Respond with a success message
-            res.status(200).json({ message: 'Submission successfully sent!' });
+            res.status(200).send(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Submission Success</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            background-color: #f4f4f9;
+                            color: #333;
+                            text-align: center;
+                            padding: 50px;
+                        }
+                        h1 {
+                            color: green;
+                        }
+                        p {
+                            font-size: 18px;
+                        }
+                        .button {
+                            background-color: #4CAF50;
+                            color: white;
+                            padding: 10px 20px;
+                            border: none;
+                            cursor: pointer;
+                            text-decoration: none;
+                            margin-top: 20px;
+                        }
+                        .button:hover {
+                            background-color: #45a049;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>Submission Successful!</h1>
+                    <p>Thank you for your submission. Your data has been successfully recorded.</p>
+                    <a href="/" class="button">Return to Home</a>
+                </body>
+                </html>
+            `);
         } catch (error) {
             // Handle errors and respond with a failure message
             console.error('Error updating GitHub file:', error);
