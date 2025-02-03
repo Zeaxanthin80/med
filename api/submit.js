@@ -54,7 +54,7 @@ module.exports = async (req, res) => {
             );
 
             // Step 6: Respond with a success message
-            (res.redirect(303, '/success.html'));
+            res.redirect(303, '/success.html');
         } catch (error) {
             // Handle errors and respond with a failure message
             console.error('Error updating GitHub file:', error);
