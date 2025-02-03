@@ -54,7 +54,7 @@ module.exports = async (req, res) => {
             );
 
             // Step 6: Respond with a success message
-            res.status(200).redirect('https://api.github.com/repos/Zeaxanthin80/med/contents/success.html');
+            res.status(200).json({ message: 'Submission successfully sent!' });
 
         } catch (error) {
             // Handle errors and respond with a failure message
