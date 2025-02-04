@@ -14,8 +14,10 @@ body {
 h1{
     font-family: 'Arial', sans-serif;
     color: #343434;
-    background-color: #f4f7f6;
+    /* background-color: #f4f7f6; */
 }
+
+
 
 /* Header */
 header {
@@ -440,6 +442,33 @@ footer {
         padding: 0 10px;  
         padding-top: 80px;  
     }
+
+    .hero-study {
+        background-image: url('../images/airsense-11-cpap-machine-for-sleep_1198x1198.webp');
+        background-size: cover;
+        background-position: center;
+        height: 60vh;
+        color: white;
+        display: flex;
+        align-content: space-between;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        padding: 0 16px;  
+        padding-top: 8px;  
+    }
+
+    .hero-study .hero-content h1 {
+        color: #c5f1f9;
+        text-align: left;
+        font-weight: 700;
+        font-size: 28pt;
+        height: 400px;
+        justify-content: flex-start;
+        align-content: first baseline;
+        
+    }
     
     h2 {
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Add subtle shadow */;
@@ -463,8 +492,9 @@ footer {
     }
     
     .hero-content {
-        padding: 16px; /* Adds space around the content inside the hero section */
+        padding: 10px; /* Adds space around the content inside the hero section */
         text-align: center;
+        align-content: space-between;
     }
     
     .hero-content p {
