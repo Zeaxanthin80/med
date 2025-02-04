@@ -23,6 +23,7 @@ h1{
 /* Header */
 header {
     background-color: #7fa6ad; /* Color based on medical theme */
+    height: 50px;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -36,7 +37,7 @@ header {
 /* Logo Styling */
 .logo img {
     width: auto;  /* Maintain original aspect ratio */
-    height: 21px;  /* Adjust height to fit well in the header */
+    height: 22px;  /* Adjust height to fit well in the header */
     max-width: 100%; /* Make sure the logo doesn't overflow its container */
     display: block;
     margin: 0;
@@ -70,24 +71,35 @@ nav .nav-list {
     
 }
 
+nav .nav-list li:not(:last-child) {
+    border-right: 2px solid #ccc; /* Change color and thickness as needed */
+    padding-right: 15px; /* Adds space between the link and the separator */
+}
+
 nav .nav-list li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     padding-left: 20px;
+    padding-right: 10px;
 }
 
 nav .hamburger {
     display: none;
     cursor: pointer;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
 }
 
 nav .hamburger .bar {
-    width: 25px;
-    height: 3px;
+    width: 30px;
+    height: 2px;
     background-color: white;
+}
+
+nav .hamburger .menu {
+    color: white;
+    font-size: .65rem;
 }
 
 /* Hero Section */
@@ -318,7 +330,7 @@ footer {
     nav .nav-list {
         display: none;
         position: absolute;
-        top: 46px;
+        top: 51px;
         left: 0;
         background-color: #7fa6ad;
         width: 100%;
