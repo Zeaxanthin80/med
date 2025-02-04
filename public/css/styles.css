@@ -9,6 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333;
     background-color: #f4f7f6;
+    margin-bottom: 100px;
 }
 
 h1{
@@ -427,6 +428,17 @@ footer {
         display: flex;
     }
 
+    section p {
+        color: #466065;
+        padding-top: 10px;
+        padding-bottom: 10px
+    }
+
+    section li {
+        color: #627a7e;
+        padding: 10px
+    }
+
     .hero {
         background-image: url('../images/pexels-tara-winstead-7722640.jpg');
         background-size: cover;
@@ -467,9 +479,56 @@ footer {
         height: 400px;
         justify-content: flex-start;
         align-content: first baseline;
+    }
+
+    .hero-study-description {
+        color: #7fa6ad;
+        padding: 20px;
+        font-size: x-large;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Add subtle shadow */;
         
     }
     
+    .study-description {
+        padding: 20px;
+    }
+
+    .study-description h2{
+        padding-bottom: 20px;
+    }
+
+    .study-details {
+        padding: 20px;
+    }
+
+    .study-details h2{
+        padding-bottom: 20px;
+    }
+
+    .why-smoking-affects-cpap {
+        padding: 20px;
+    }
+
+    .why-smoking-affects-cpap h2{
+        padding-bottom: 20px;
+    }
+
+    .cpap-machine-testing {
+        padding: 20px;
+    }
+
+    .cpap-machine-testing h2{
+        padding-bottom: 20px;
+    }
+
+    .how-to-participate {
+        padding: 20px;
+    }
+
+    .how-to-participate h2{
+        padding-bottom: 20px;
+    }
+
     h2 {
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Add subtle shadow */;
     
@@ -559,6 +618,10 @@ footer {
 .our-team .team-member p {
     font-size: 16px;
     color: #555;
+}
+
+footer p {
+    color: #f4f7f6;
 }
     
 }
