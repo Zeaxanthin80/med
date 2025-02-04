@@ -7,14 +7,14 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color:#627a7e;
     background-color: #f4f7f6;
     margin-bottom: 100px;
 }
 
 h1{
     font-family: 'Arial', sans-serif;
-    color:#466065;
+    color: #343434;
     /* background-color: #f4f7f6; */
 }
 
@@ -165,7 +165,7 @@ nav .hamburger .bar {
 .our-mission p {
     font-size: 18px;
     line-height: 1.6;
-    color: #555;
+    color:#7fa6ad;
 }
 
 /* Why Join Section */
@@ -185,19 +185,20 @@ nav .hamburger .bar {
 .why-join p {
     font-size: 18px;
     line-height: 1.6;
-    color: #555;
+    color: #7fa6ad;
     margin-bottom: 20px;
 }
 
 .why-join ul {
     list-style-type: none;
     padding: 0;
+    color: #466065;
 }
 
 .why-join ul li {
     font-size: 18px;
     line-height: 1.6;
-    color: #555;
+    color: #7fa6ad;
     margin-bottom: 10px;
 }
 
@@ -207,6 +208,7 @@ nav .hamburger .bar {
     background-color: #ffffff;
     text-align: center;
     margin-bottom: 40px;
+    color: #7fa6ad;
 }
 
 .clinical-trials h2 {
@@ -223,7 +225,7 @@ nav .hamburger .bar {
 .clinical-trials ul li {
     font-size: 18px;
     line-height: 1.6;
-    color: #555;
+    color: #7fa6ad;
     margin-bottom: 10px;
 }
 
@@ -272,7 +274,7 @@ nav .hamburger .bar {
 
 .our-team .team-member p {
     font-size: 16px;
-    color: #555;
+    color: #7fa6ad;
 }
 
 /* Contact Us Section */
@@ -290,7 +292,7 @@ nav .hamburger .bar {
 
 .contact-us p {
     font-size: 18px;
-    color: #555;
+    color: #a3a4a4;
     margin-bottom: 10px;
 }
 
@@ -359,13 +361,13 @@ footer {
     }
 
     section p {
-        color:#627a7e;
+        color: #7fa6ad;
         padding-top: 10px;
         padding-bottom: 10px
     }
 
     section li {
-        color:#627a7e;
+        color: #7fa6ad;
         padding: 10px
     }
 
@@ -425,12 +427,10 @@ footer {
 
     .study-description h2{
         padding-bottom: 20px;
-        color: #627a7e;
     }
 
     .study-details {
         padding: 20px;
-        color: #627a7e;
     }
 
     .study-details h2{
@@ -439,7 +439,6 @@ footer {
 
     .why-smoking-affects-cpap {
         padding: 20px;
-        color: #627a7e;
     }
 
     .why-smoking-affects-cpap h2{
@@ -448,7 +447,6 @@ footer {
 
     .cpap-machine-testing {
         padding: 20px;
-        color: #627a7e;
     }
 
     .cpap-machine-testing h2{
@@ -457,7 +455,6 @@ footer {
 
     .how-to-participate {
         padding: 20px;
-        color: #627a7e;
     }
 
     .how-to-participate h2{
@@ -552,7 +549,7 @@ footer {
 
 .our-team .team-member p {
     font-size: 16px;
-    color: #555;
+    color: #7fa6ad;
 }
 
 footer p {

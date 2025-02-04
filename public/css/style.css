@@ -367,6 +367,8 @@ footer {
         padding: 0 10px;  
         padding-top: 80px;  
     }
+
+
     
     h2 {
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Add subtle shadow */;
@@ -414,6 +416,18 @@ footer {
     .card {
         width: 92%;
         margin-bottom: 10px;
+    }
+
+    .card h3{
+        color: #648186;
+    }
+
+    .cards-section .card p{
+        color: #7fa6ad;
+    }
+
+    .cards-section .card p strong{
+        color:#627a7e;
     }
 
     footer {
