@@ -18,7 +18,9 @@ h1{
     /* background-color: #f4f7f6; */
 }
 
-
+section {
+    padding: 20px 40px;
+}
 
 /* Header */
 header {
@@ -118,6 +120,25 @@ nav .hamburger .menu {
     padding: 0 16px;  
     padding-top: 100px;  
 }
+
+.hero-study {
+    background-image: url('../images/airsense-11-cpap-machine-for-sleep_1198x1198.webp');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    color: white;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 16px;  
+    padding-top: 8px;  
+}
+
+
+
 
 .hero h2 {
     font-size: 48px;
@@ -370,6 +391,7 @@ footer {
         display: flex;
     }
 
+
     section p {
         color:#627a7e;
         padding-top: 10px;
@@ -413,7 +435,7 @@ footer {
         padding-top: 8px;  
     }
 
-    .hero-study .hero-content h1 {
+    .hero-study .hero-content {
         color: #c5f1f9;
         text-align: left;
         font-weight: 700;
@@ -431,6 +453,8 @@ footer {
         
     }
     
+
+
     .study-description {
         padding: 20px;
     }
