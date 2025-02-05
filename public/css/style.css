@@ -195,8 +195,7 @@ h2 {
 }
 
 .card p {
-    font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .card:hover {
@@ -433,6 +432,10 @@ footer {
 
     .cards-section .card p strong{
         color:#627a7e;
+    }
+
+    .comp {
+        font-size: 1.4em;
     }
 
     footer {
