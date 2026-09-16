@@ -26,3 +26,315 @@ kpp,p,p,p,p,p,p,pp,p,p
 H,H,H,H,H,H,H,H,H,H
 Luz Stella,Piedrahita ,1900 S Treasure Dr #9F North Bay Village Fl 33141,Miami,Fl,33141,9548541684,luz4598@yahoo.com,Knee pain,back pain ,migraine, ,None
 Vivian ,Perez,941 NW 35 Court,Miami,Florida,33125,7867043019,vivian1vi@yahoo.com,Good,No
+,,,,,,,,I will be providing rough draft notes/comments and I need you to recreate them using the following rules documenting phone calls with Medicare Advantage members in GPS Salesforce CRM. The notes should help colleagues easily understand the situation and continue handling the case without confusion to be able to pick up where I left off incase the member has to call back.
+
+Make sure you render the note (your response) inside a code block (sometimes called a formatted text block or plain text code block), which preserves:
+ • Blank lines
+ • Line breaks
+ • Spacing for indentation
+ • Fixed-width formatting
+
+I need this output in order to use Copy button in the upper-right corner of that box, the formatting tends to survive the paste into GPS better than copying regular chat text.
+
+
+GPS Comment Layout Standard (GCLS)
+
+Standard Requirements:
+
+- Create a subject line no longer than 40 characters based on the rephrased notes/comments.
+- Notes must be factual, professional, and easy to read.
+- Include key details such as:
+    - Reason for the call
+    - Actions taken
+    - Information provided to the member
+    - Any follow-up needed
+    - Any escalations or transfers
+- Avoid unnecessary wording, opinions, or assumptions.
+- Do not include PHI beyond what is necessary for standard documentation.
+
+- Use plain text only (ASCII/Unicode). No RTF or WYSIWYG formatting.
+- Avoid non-ASCII/Unicode
+- Every section is required.
+- Separate every section with this exact divider rule on its own line after the section followed by an empty line:
+____________________________________________________
+
+- No empty line between the divider rule and the previous section
+- Place one blank line before and after each divider rule.
+- Do not place a divider before the subject line or after the final section.
+
+List Requirements:
+
+- List items should be no longer than 60 characters including blank spaces.
+- List items should be indented using <space space space •/- space> format.
+- For a list of steps, numbered list must include a <space space space number space> format.
+- Do not use actual tab characters.
+- Use spaces for indentation (spacebar)
+- When using lists, use standard Unicode bullets (•), ☑, ☐, or hyphens (-).
+- Do not use rich-text, tables, markdown checkboxes, or special formatting.
+- Emojis must be standard Unicode emojis that remain intact when copied and pasted.
+
+
+Spacing Requirements:
+- The container width is 64 spaces wide and unlimited height.
+- The goal is to create structure to mimic minimal text based ui
+- Everything after the section titles gets indented with spaces, subitems get indented another level
+- Separate adjacent sections with the exact divider rule defined above, surrounded by one blank line on each side.
+- Use return (line break) for each paragraphs line when creating hierarchical content that exceed the width of 60 characters.
+- Do not use tabs or rich-text spacing.
+- Do not rely on markdown formatting for separation.
+- Do not place bullets immediately after a paragraph or section without a blank line.
+
+
+
+Comment Format Rules (Clean Clinical Style)
+
+1. Subject Line
+Always start with:
+
+SUBJECT | <40 characters or less>
+
+Rules:
+ • Use title case when possible
+ • Keep concise and specific
+
+Examples:
+SUBJ | Hearing Benefits & Fitness DMR
+SUBJ | Watchman Procedure
+SUBJ | EOB, Cost Share, & LifeStation Discount
+
+
+2. Required Section Order:
+Use sections in this exact order whenever applicable:
+
+SUBJ |
+____________________________________________________
+
+📞 REASON
+____________________________________________________
+
+✅ REVIEW
+____________________________________________________
+
+📋 ACTION
+____________________________________________________
+
+ℹ️ INFO PROVIDED
+____________________________________________________
+
+🔄 TRANSFER/FOLLOW-UP
+____________________________________________________
+
+⚠️ ISSUE
+____________________________________________________
+
+✔ OUTCOME
+____________________________________________________
+
+🔤 ACRONYMS/ABBREVIATIONS
+
+Capitalize section titles.
+Only include sections that apply.
+Do not include empty sections.
+Always place the divider rule between every two included sections, even when one or more optional sections are omitted.
+
+
+3. Section Divider Spacing
+Separate every major section with the exact divider rule and a blank line on both sides.
+
+Example:
+
+📞 REASON
+    <call reason>
+____________________________________________________
+
+✅ REVIEW
+    <Coverage, cost-share, research, findings, or verification>
+____________________________________________________
+
+📋 ACTION
+    <Actions taken during the call>
+____________________________________________________
+
+ℹ️ INFO PROVIDED
+    <Information explained to the member>
+____________________________________________________
+
+✔ OUTCOME
+    <Resolution or next steps>
+
+Never do:
+📞 Reason
+Member called.
+✅ Review
+Policy reviewed.
+
+
+4. List Usage
+Use bullets only when presenting multiple related items.
+Do NOT put everything into bullets.
+
+Bullet Example:
+
+  • Benefit confirmed
+  • Claim reviewed
+  • Copay explained
+
+Secondary Detail Example:
+
+    ☑ DMR form mailed
+    ☑ Order #: A10219078807709572529
+    ☑ Status: Approved
+    ☐ Status: Pending
+
+
+5. Action Section
+Document work completed.
+
+Examples:
+
+📋 Action
+
+  • Reviewed MedCompass
+  • Reviewed GPS
+  • Sent SMS
+  • Mailed DMR form
+  • Transferred to vendor
+
+
+6. Outcome Section
+Always conclude with a final disposition.
+
+Examples:
+
+✔ Outcome
+
+Member acknowledged information provided.
+
+
+7. Approved Emojis
+Limit to section headers.
+
+📞 Reason
+
+✅ Review
+
+📋 Action
+
+ℹ️ Information Provided
+
+🔄 Follow-Up
+
+⚠️ Issue
+
+✔ Outcome
+
+
+8. Phone Numbers
+Present consistently, phone number first then contact name.
+ONLY USE SPACES FOR PHONE NUMBERS, DO NOT USE HYPHENS
+
+Example:
+
+123 456 7890 | Vendor
+866 344 7756 | TruHearing
+877 301 0839 | Amplifon
+
+
+9. Claims
+
+Example:
+
+04/20/2026 | Youngmans Equiptment LLC | $8,871.60
+05/20/2026 | Youngmans Equiptment LLC | $4,841.60
+06/23/2026 | Youngmans Equiptment LLC | $4,968.00
+
+
+06/24/2026 | Kadrex Solutions | $4,808.40
+07/27/2026 | Kadrex Solutions | $7,212.60
+
+
+10. Date Format:
+
+08/06/2026 | Preventive
+07/18/2026 | Annual Wellness Visit, or Annual Physical
+02/xx/2026 | All Vaccinees
+
+
+11. For fixed-width readability, reserve the pipe character for metadata:
+
+Example:
+
+ACTION
+
+  • DMR form mailed
+  • OneKit order submitted
+
+    | Order : A10219078807709572529
+    | Status: Approved
+
+
+12. 🔤 ACRONYMS/ABBREVIATIONS
+
+Examples:
+
+• MM = Member
+• PA = Prior Authorization
+• PCP = Primary Care Provider
+• MRI = Magnetic Resonance Imaging
+• PET = Positron Emission Tomography
+
+
+13. Emoji Requirements:
+
+- Use only standard Unicode emojis.
+- Emojis must be copy/paste compatible in GPS CRM.
+- Recommended emojis:
+📞 ✅ 🔍 📋 📄 🧾  ℹ️ 🔄 ⚠️ ⏳ 
+
+
+ACRONYMS/ABBREVIATIONS Glossary
+
+AEP	Annual Enrollment Period
+CC	Carbon Copy
+KTC	Keeping the commitment
+
+POA	Power of Attorney
+PA	Prior Authorization
+
+OEP	Open Enrollment Period
+SEP	Special Enrollment Period	
+IEP	Initial Enrollment Period
+INN	In Network
+OEPI	Open Enrollment for Institutional Individuals
+OEV	Outbound Enrollment Verification
+HRA	Health Risk Assessment
+OSB	Optional Supplemental benefit
+OBC	Outbound Correspondence
+SR	Service Request
+MM	Medicare Member
+DSNP	Dual Special Needs Plan
+LIS	Low Income Subsidy
+MSP	Medicare Savings Program
+OOA	Out of Area
+OOP	Out of Pocket
+OON	Out of Network
+SHIP	State Health Insurance Assistance Programs
+POIN	Provider Organization Identification number
+MHK	MedHOK (Medical House of Knowledge)
+GPS	Guided Personal Service
+HRP	HealthRules Payer
+PCA	Personal Care Attendants
+HHA	Home Health Aid
+DME	Durable Medical Equipment
+MSO	Medicare Service Operations
+CT	Computed Tomography
+MRI	Magnetic Resonance Imaging
+EKG	electrocardiogram or ECG
+NPL	National Participating Provider Precertification List
+CHD	Claims Help Desk
+
+MR-CLS1 - CSSUP W/CLAIMS PROCESSING
+USCLMINQ - HMO CLAIM INQUIRY MENU
+PSRCINQ - SERVICE CODE & RATES INQUIRY MENU
+PSSCHINQ - STRATEGIC CONTRACT INQ
+,
